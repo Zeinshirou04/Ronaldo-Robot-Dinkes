@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Display;
 use Illuminate\Http\Request;
+use Inertia\Inertia;
 
 class DisplayController extends Controller
 {
@@ -18,6 +19,10 @@ class DisplayController extends Controller
 
     public function index() {
         return view('display/index');
+    }
+
+    public function dummy() {
+        return Inertia::render('Display/Eye/RonaldoEye');
     }
 
     public function setExpress(Request $request) {

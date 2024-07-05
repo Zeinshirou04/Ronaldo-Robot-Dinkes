@@ -11,6 +11,7 @@ Route::get('/', function () {
 });
 
 Route::get('/eye/display', [DisplayController::class, 'index']);
+Route::get('/display/eye/ronaldo', [DisplayController::class, 'dummy']);
 
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
