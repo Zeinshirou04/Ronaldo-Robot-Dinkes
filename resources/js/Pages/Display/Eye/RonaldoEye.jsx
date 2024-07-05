@@ -34,16 +34,23 @@ export default function RonaldoEye() {
                         id="pupil-left"
                         className="w-1/2 h-3/5 bg-black absolute"
                         style={{
-                            top: '50%',
-                            transform: 'translateY(-50%)',
-                            left: '50%',
+                            top: "50%",
+                            transform: "translateY(-50%)",
+                            left: "50%",
                             borderRadius: "70%",
-                            animationName: 'idle-eye',
-                            animationDuration: '20s',
-                            animationIterationCount: 'infinite',
-                            animationTimingFunction: 'ease-in-out'
+                            animationName: "idle-eye",
+                            animationDuration: "20s",
+                            animationIterationCount: "infinite",
+                            animationTimingFunction: "ease-in-out",
                         }}
-                    ></div>
+                    >
+                        <div
+                            className="w-12 h-16 bg-gray-200/30"
+                            style={{
+                                borderRadius: "60%",
+                            }}
+                        ></div>
+                    </div>
                 </div>
                 <div
                     id="eyes-right"
@@ -56,16 +63,23 @@ export default function RonaldoEye() {
                         id="pupil-right"
                         className="w-1/2 h-3/5 bg-black absolute"
                         style={{
-                            top: '50%',
-                            transform: 'translateY(-50%)',
-                            left: '50%',
+                            top: "50%",
+                            transform: "translateY(-50%)",
+                            left: "50%",
                             borderRadius: "70%",
-                            animationName: 'idle-eye',
-                            animationDuration: '20s',
-                            animationIterationCount: 'infinite',
-                            animationTimingFunction: 'ease-in-out'
+                            animationName: "idle-eye",
+                            animationDuration: "20s",
+                            animationIterationCount: "infinite",
+                            animationTimingFunction: "ease-in-out",
                         }}
-                    ></div>
+                    >
+                        <div
+                            className="w-12 h-16 bg-gray-200/30"
+                            style={{
+                                borderRadius: "60%",
+                            }}
+                        ></div>
+                    </div>
                 </div>
             </div>
         </section>
