@@ -1,0 +1,169 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    margin: 0;
+}
+
+.eyes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.eye {
+    width: 6rem;
+    height: 6rem;
+    background-color: white;
+    display: inline-block;
+    border-radius: 50%;
+    margin: 2rem;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.pupil-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition-timing-function: ease-in-out;
+    animation-direction: alternate;
+}
+
+.pupil {
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: black;
+    border-radius: 50%;
+    position: relative;
+    transition-timing-function: ease-in-out;
+    animation-direction: alternate;
+}
+
+.shine {
+    width: 1.85rem;
+    height: 2rem;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    position: absolute;
+    bottom: 20%;
+    left: 20%;
+}
+
+.eyelid-right {
+    position: absolute;
+    width: 15rem;
+    height: 0;
+    background-color: #b0b0b0;
+    z-index: 1000;
+    transition: height 0.3s, top 0.3s, bottom 0.3s;
+    rotate: 15deg;
+    top: -2rem;
+    right: -1rem;
+    transition-timing-function: ease-in-out;
+    animation-direction: alternate;
+}
+
+.eyelid-left {
+    position: absolute;
+    width: 15rem;
+    height: 0;
+    background-color: #b0b0b0;
+    z-index: 1000;
+    transition: height 0.3s, top 0.3s, bottom 0.3s;
+    rotate: -15deg;
+    transform: scaleX(-1);
+    top: -2rem;
+    left: -1rem;
+    transition-timing-function: ease-in-out;
+    animation-direction: alternate;
+}
+
+/* Animations */
+@keyframes look-right {
+    from {
+        transform: translate(-50%, -50%);
+    }
+    to {
+        transform: translate(-30%, -50%);
+    }
+}
+
+@keyframes look-left {
+    from {
+        transform: translate(-50%, -50%);
+    }
+    to {
+        transform: translate(-60%, -50%);
+    }
+}
+
+@keyframes look-up {
+    from {
+        transform: translate(-50%, -50%);
+    }
+    to {
+        transform: translate(-50%, -60%);
+    }
+}
+
+@keyframes look-down {
+    from {
+        transform: translate(-50%, -50%);
+    }
+    to {
+        transform: translate(-50%, -30%);
+    }
+}
+
+@keyframes marah {
+    to {
+        transform: translate(-50%, -50%);
+    }
+}
+
+@keyframes marah-eyelid {
+    to {
+        height: 50%;
+        border-radius: 50% 50% 0 0;
+    }
+}
+
+@keyframes senang {
+    to {
+        transform: translate(-50%, -50%);
+    }
+}
+
+@keyframes senang-pupil {
+    from {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+    to {
+        width: 3rem;
+        height: 3rem;
+    }
+}
+
+/* Button Styles */
+.controls {
+    margin-top: 2rem;
+}
+
+button {
+    margin: 0 0.5rem;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+}
